@@ -15,7 +15,7 @@ This library is continuously expanding. Click the links below to view detailed w
 
 | Module | Status | Target Device / Application | Documentation |
 | :--- | :--- | :--- | :--- |
-| **I2C Master** | ✅ Completed | SHT31 Temp/Humi Sensor | [View Details](./I2C/README.md) |
+| **I2C Master** | ✅ Completed | SHT31 Temp/Humi Sensor | [View Details](./Drivers/I2C/README.md) |
 | **UART / USART** | In Progress | Debug Console (USART3) | [Coming Soon] |
 | **SPI Master** | In Progress | ST7735 Display Control | [Coming Soon] |
 
