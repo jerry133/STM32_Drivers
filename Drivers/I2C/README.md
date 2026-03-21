@@ -1,4 +1,4 @@
-# I2C Master Register-Level Driver
+# I2C Master Driver
 
 This driver provides a set of core API functions to control the I2C peripherals of the **STM32H755** by directly manipulating hardware registers, bypassing the HAL layer for maximum efficiency.
 
