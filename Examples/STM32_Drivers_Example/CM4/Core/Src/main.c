@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "My_I2C_Driver.h"
+#include "My_UART_Driver.h"
 #include <stdio.h>
 #include <string.h>
 /* USER CODE END Includes */
@@ -123,6 +124,7 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
   My_I2C_Init(&hmy_i2c1, I2C1);
+  My_UART_Init(USART3, 32000000, 115200);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -158,9 +160,8 @@ int main(void)
   	      sprintf(uart_buf, "Temp: %.2f C, Humi: %.2f %%\r\n", temp, humi);
 
   	      // 4. 透過 USART3 發送出去
-  	      HAL_UART_Transmit(&huart3, (uint8_t *)uart_buf, strlen(uart_buf), HAL_MAX_DELAY);
+  	      My_UART_Transmit(USART3, (uint8_t *)uart_buf, strlen(uart_buf));
   	  }
-
   	  HAL_Delay(1000);
       /* USER CODE END WHILE */
 
